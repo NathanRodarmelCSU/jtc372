@@ -66,7 +66,7 @@ a {
     background-color: var(--page-background-color);
 }
 
-.subtitle {
+.page-subtitle {
     letter-spacing: 1.5px;
     color: var(--text-color-dark);
     font-weight: 700;
@@ -74,7 +74,7 @@ a {
     font-size: 0.95rem;
 }
 
-.title {
+.page-title {
     font-family: "Outfit", sans-serif;
     font-size: 3.1rem;
     font-weight: 800;
@@ -84,11 +84,11 @@ a {
     letter-spacing: -1px;
 }
 
-.title span {
+.page-title span {
     color: var(--primary-color);
 }
 
-.description {
+.page-description {
     line-height: 1.85rem;
     color: var(--text-color-medium);
     margin-bottom: 2rem;
@@ -263,7 +263,7 @@ footer p {
 }
 
 /* ========================================================= */
-/* Homepage (index.html hero section)                         */
+/* Homepage (index.html main section)                         */
 /* ========================================================= */
 
 .section__container {
@@ -277,7 +277,7 @@ footer p {
     align-items: center;
 }
 
-.content {
+.page-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -330,7 +330,7 @@ footer p {
 /* Homepage image and profile placeholder                     */
 /* ========================================================= */
 
-.image {
+.profile-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -411,7 +411,7 @@ footer p {
     margin-bottom: 1.5rem;
 }
 
-.disclaimer-header .title {
+.disclaimer-header .page-title {
     font-size: 2rem;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -503,14 +503,14 @@ footer p {
 }
 
 .disclaimer-block a,
-.content a {
+.page-content a {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
 }
 
 .disclaimer-block a:hover,
-.content a:hover {
+.page-content a:hover {
     text-decoration: underline;
 }
 
@@ -560,13 +560,13 @@ footer p {
         gap: 2.5rem;
     }
 
-    .content {
+    .page-content {
         max-width: 100%;
         margin: 0 auto;
         align-items: center;
     }
 
-    .description {
+    .page-description {
         margin-left: auto;
         margin-right: auto;
     }
@@ -584,14 +584,14 @@ footer p {
         gap: 1.25rem;
     }
 
-    .disclaimer-header .title {
+    .disclaimer-header .page-title {
         font-size: 2rem;
         max-width: none;
     }
 }
 
 @media (max-width: 700px) {
-    .title {
+    .page-title {
         font-size: 2.9rem;
     }
 
@@ -608,7 +608,7 @@ footer p {
         padding: 1.5rem 1rem 2.5rem;
     }
 
-    .disclaimer-header .title {
+    .disclaimer-header .page-title {
         font-size: 1.85rem;
     }
 
@@ -627,11 +627,11 @@ footer p {
 }
 
 @media (max-width: 500px) {
-    .title {
+    .page-title {
         font-size: 2.35rem;
     }
 
-    .description {
+    .page-description {
         font-size: 0.96rem;
         line-height: 1.75rem;
     }
