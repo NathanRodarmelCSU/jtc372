@@ -787,8 +787,14 @@ footer p {
 }
 
 .contact-page .info-card a {
+    color: var(--primary-color);
     font-weight: 600;
-    word-break: break-word;
+    text-decoration: none;
+}
+
+.contact-page .info-card a:hover {
+    color: var(--primary-color-dark);
+    text-decoration: underline;
 }
 /* ========================================================= */
 /* Responsive styles                                          */
