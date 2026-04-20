@@ -528,11 +528,268 @@ footer p {
 }
 
 /* ========================================================= */
-/* Future pages                                               */
+/* Secondary pages (shared layout)                           */
 /* ========================================================= */
 
-/* Add about page, projects page, resume page, and contact page styles below this line. */
+.secondary-page {
+    padding: 5.5rem 1rem 4.5rem;
+}
+.secondary-container {
+    max-width: var(--maximum-content-width);
+    margin: 0 auto;
+}
 
+.secondary-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.secondary-description {
+    max-width: 42rem;
+    margin-bottom: 0;
+}
+
+.secondary-description--wide {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.info-card {
+    padding: 1.6rem;
+    background-color: var(--card-background-color);
+    border-radius: 22px;
+    box-shadow: var(--soft-box-shadow);
+}
+
+.page-list {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.page-list li {
+    margin-bottom: 0.45rem;
+}
+
+.card-subtext {
+    color: var(--text-color-light);
+    margin-bottom: 0.35rem;
+}
+
+.card-copy {
+    margin-bottom: 1.2rem;
+}
+
+/* ========================================================= */
+/* Resume page                                               */
+/* ========================================================= */
+
+.resume-page .secondary-header {
+    margin-bottom: 2.75rem;
+}
+
+.resume-page .info-card-grid {
+    align-items: start;
+}
+
+.resume-page .info-card {
+    height: 100%;
+}
+
+.resume-page .info-card h2 {
+    padding-bottom: 0.65rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.resume-page .info-card strong {
+    color: var(--text-color-dark);
+    font-weight: 700;
+}
+
+.resume-page .card-subtext {
+    color: var(--text-color-light);
+    margin-bottom: 0.3rem;
+    line-height: 1.65rem;
+}
+
+.resume-page .card-copy {
+    margin-bottom: 1rem;
+}
+
+.resume-page .page-list {
+    margin-top: 0.85rem;
+    padding-left: 1.2rem;
+}
+
+.resume-page .page-list li {
+    color: var(--text-color-medium);
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.resume-page .page-list li:last-child {
+    margin-bottom: 0;
+}
+
+.resume-note-card {
+    background-color: var(--card-background-color);
+    border-radius: 22px;
+    box-shadow: var(--soft-box-shadow);
+    padding: 1.6rem;
+    margin-top: 1.5rem;
+}
+
+.resume-note-card h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+    color: var(--text-color-dark);
+}
+
+.resume-note-card p {
+    color: var(--text-color-medium);
+    line-height: 1.8rem;
+}
+
+.resume-page .resume-download-link {
+    display: inline-block;
+    margin-top: 0.9rem;
+    padding: 0.85rem 1.2rem;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.resume-page .resume-download-link:hover {
+    background-color: var(--primary-color-dark);
+    transform: translateY(-1px);
+}
+
+.resume-hero {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.resume-hero__actions {
+    margin-bottom: 2rem;
+}
+
+.resume-download-button {
+    display: inline-block;
+    padding: 0.95rem 1.5rem;
+    border-radius: 14px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.98rem;
+    transition: 0.25s;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.resume-download-button:hover {
+    background-color: var(--primary-color-dark);
+    transform: translateY(-1px);
+}
+
+.resume-tag-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 100%;
+    margin: 0 auto 0.5rem;
+    overflow-x: auto;
+    padding: 0.25rem 0;
+}
+
+.resume-tag-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    background-color: var(--card-background-color);
+    color: var(--text-color-medium);
+    font-weight: 700;
+    font-size: 0.88rem;
+    box-shadow: var(--soft-box-shadow);
+}
+
+.resume-page .info-card h3 {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.05rem;
+    color: var(--text-color-dark);
+    margin-bottom: 0.35rem;
+}
+
+.resume-skill-group {
+    margin-bottom: 1.15rem;
+}
+
+.resume-skill-group:last-child {
+    margin-bottom: 0;
+}
+
+.resume-skill-group p {
+    color: var(--text-color-medium);
+    line-height: 1.7rem;
+    margin-bottom: 0;
+}
+@media (max-width: 900px) {
+    .info-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-page .secondary-header {
+        margin-bottom: 2.25rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .secondary-page {
+        padding: 7rem 1rem 4rem;
+    }
+
+    .resume-page .info-card {
+        padding: 1.35rem;
+    }
+
+    .resume-note-card {
+        padding: 1.35rem;
+    }
+}
+
+/* ========================================================= */
+/* Contact page                                              */
+/* ========================================================= */
+
+.contact-page .secondary-header {
+    margin-bottom: 2.25rem;
+}
+
+.contact-page .info-card {
+    text-align: center;
+}
+
+.contact-page .info-card h2 {
+    margin-bottom: 0.6rem;
+}
+
+.contact-page .info-card a {
+    font-weight: 600;
+    word-break: break-word;
+}
 /* ========================================================= */
 /* Responsive styles                                          */
 /* ========================================================= */
