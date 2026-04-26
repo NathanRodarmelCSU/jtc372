@@ -585,6 +585,90 @@ footer p {
     margin-bottom: 1.2rem;
 }
 
+.secondary-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.secondary-text {
+    min-width: 0;
+}
+
+.secondary-visual {
+    display: grid;
+    place-items: center;
+}
+
+.content-card {
+    background-color: var(--card-background-color);
+    border-radius: 22px;
+    box-shadow: var(--soft-box-shadow);
+    padding: 1.7rem;
+}
+
+.content-card p {
+    color: var(--text-color-medium);
+    line-height: 1.85rem;
+    margin-bottom: 1rem;
+}
+
+.content-card p:last-child {
+    margin-bottom: 0;
+}
+
+.profile-panel {
+    width: min(26rem, 100%);
+    aspect-ratio: 1 / 1;
+    border-radius: 28px;
+    background: linear-gradient(
+            135deg,
+            var(--placeholder-background-dark),
+            var(--placeholder-background-light)
+    );
+    display: grid;
+    place-items: center;
+    box-shadow: var(--soft-box-shadow);
+    padding: 1.25rem;
+}
+
+.profile-panel__inner {
+    text-align: center;
+    color: var(--primary-color-dark);
+}
+
+.profile-panel__inner span {
+    display: block;
+    font-family: "Outfit", sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.65rem;
+}
+
+.profile-panel__inner p {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.about-card-grid {
+    margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .secondary-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .secondary-visual {
+        order: -1;
+    }
+
+    .profile-panel {
+        width: min(22rem, 100%);
+    }
+}
 /* ========================================================= */
 /* Resume page                                               */
 /* ========================================================= */
@@ -796,6 +880,176 @@ footer p {
     color: var(--primary-color-dark);
     text-decoration: underline;
 }
+
+/* ========================================================= */
+/* Projects page                                             */
+/* ========================================================= */
+
+.project-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-card-new {
+    background-color: var(--card-background-color);
+    border-radius: 22px;
+    padding: 1.5rem;
+    box-shadow: var(--soft-box-shadow);
+    height: 100%;
+    transition: 0.25s;
+}
+
+.project-link:hover .project-card-new {
+    transform: translateY(-4px);
+}
+
+.project-card-new h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.25rem;
+    color: var(--text-color-dark);
+    margin-bottom: 0.8rem;
+}
+
+.project-card-new p {
+    color: var(--text-color-medium);
+    line-height: 1.75rem;
+    font-size: 0.96rem;
+}
+
+.project-image-placeholder-new {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 18px;
+    background: linear-gradient(
+            135deg,
+            var(--placeholder-background-dark),
+            var(--placeholder-background-light)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+    .project-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================================= */
+/* Homelab page                                              */
+/* ========================================================= */
+
+.homelab-grid {
+    margin-top: 2rem;
+}
+
+.homelab-skills {
+    margin-top: 2rem;
+}
+
+/* Icon styling */
+
+.homelab-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 0.75rem;
+    border-radius: 12px;
+    background-color: var(--footer-background-color); /* FIX */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homelab-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.homelab-page .secondary-header {
+    margin-bottom: 2rem;
+}
+
+
+/* ========================================================= */
+/* Coursework page                                           */
+/* ========================================================= */
+
+.course-project {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.course-project.reverse {
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.course-project.reverse .course-text {
+    order: 2;
+}
+
+.course-project.reverse .course-image {
+    order: 1;
+}
+
+.course-text h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--text-color-dark);
+}
+
+.course-text p {
+    color: var(--text-color-medium);
+    line-height: 1.85rem;
+}
+
+.course-image {
+    display: flex;
+    justify-content: center;
+}
+
+.course-image-placeholder {
+    width: 260px;
+    height: 260px;
+    border-radius: 22px; /* matches your cards */
+    background: linear-gradient(
+            135deg,
+            var(--placeholder-background-dark),
+            var(--placeholder-background-light)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--primary-color-dark);
+    box-shadow: var(--soft-box-shadow);
+}
+
+@media (max-width: 900px) {
+    .course-project {
+        grid-template-columns: 1fr;
+    }
+
+    .course-project.reverse .course-text,
+    .course-project.reverse .course-image {
+        order: unset;
+    }
+}
+
 /* ========================================================= */
 /* Responsive styles                                           */
 /* ========================================================= */
