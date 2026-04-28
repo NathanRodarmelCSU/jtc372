@@ -45,9 +45,16 @@ projects.html
         <div class="project-card-grid">
 
             <!-- Home Lab -->
-            <a href="homelab.html" class="project-link">
+            <a href="homelab.html" class="project-link" aria-label="View Home Lab and Virtualization project">
                 <article class="project-card-new">
-                    <div class="project-image-placeholder-new">Home Lab</div>
+                    <div class="project-image-wrapper">
+                        <img src="images/homelab.jpg"
+                             alt="Proxmox dashboard showing virtual machines in a home lab environment"
+                             class="project-image"
+                             onerror="this.style.display='none';">
+
+                        <div class="project-image-placeholder-new">Home Lab</div>
+                    </div>
                     <h2>Home Lab and Virtualization</h2>
                     <p>
                         Built and managed a personal home lab environment using virtualization
@@ -57,10 +64,17 @@ projects.html
                 </article>
             </a>
 
-            <!-- ADS-B -->
-            <a href="adsb.html" class="project-link">
+            <a href="adsb.html" class="project-link" aria-label="View ADS-B Flight Tracking Setup project">
                 <article class="project-card-new">
-                    <div class="project-image-placeholder-new">Flight Tracking</div>
+                    <div class="project-image-wrapper">
+                        <img src="images/fr24nr.png"
+                             alt="Flight tracking map showing live ADS-B data"
+                             class="project-image"
+                             onerror="this.style.display='none';">
+
+                        <div class="project-image-placeholder-new">Flight Tracking</div>
+                    </div>
+
                     <h2>ADS-B Flight Tracking Setup</h2>
                     <p>
                         Configured and maintained a flight tracking system using Linux-based
@@ -70,9 +84,16 @@ projects.html
             </a>
 
             <!-- Coursework -->
-            <a href="coursework.html" class="project-link">
+            <a href="coursework.html" class="project-link" aria-label="View Computer Science Coursework projects">
                 <article class="project-card-new">
-                    <div class="project-image-placeholder-new">Coursework</div>
+                    <div class="project-image-wrapper">
+                        <img src="images/coursework.jpg"
+                             alt="JSON response from backend API project"
+                             class="project-image"
+                             onerror="this.style.display='none';">
+
+                        <div class="project-image-placeholder-new">Coursework</div>
+                    </div>
                     <h2>Computer Science Coursework</h2>
                     <p>
                         Academic projects covering software development, systems, databases,

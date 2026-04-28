@@ -940,11 +940,47 @@ footer p {
     margin-bottom: 1rem;
 }
 
+/* Real project image with fallback placeholder */
+.project-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 18px;
+    margin-bottom: 1rem;
+    background: linear-gradient(
+            135deg,
+            var(--placeholder-background-dark),
+            var(--placeholder-background-light)
+    );
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Only affects placeholders inside image wrappers */
+.project-image-wrapper .project-image-placeholder-new {
+    position: absolute;
+    inset: 0;
+    margin-bottom: 0;
+    z-index: 0;
+}
+
+.project-image-wrapper .project-image {
+    position: relative;
+    z-index: 1;
+}
+
 @media (max-width: 900px) {
     .project-card-grid {
         grid-template-columns: 1fr;
     }
 }
+
 
 /* ========================================================= */
 /* Homelab page                                              */
