@@ -9,7 +9,7 @@ adsb.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADS-B | Nathan Rodarmel</title>
+    <title>Aviation | Nathan Rodarmel</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,71 +34,86 @@ adsb.html
     <div class="secondary-container">
 
         <div class="secondary-header">
-            <h1 class="page-title">ADS-B Flight <span>Tracking</span></h1>
+            <p class="page-subtitle">AVIATION</p>
+            <h1 class="page-title">Flying & <span>Aerospace</span></h1>
             <p class="page-description secondary-description secondary-description--wide">
-                A Linux-based system used to receive and share real-time aircraft data.
+                Aviation has been a long-standing personal interest spanning recreational flying,
+                drone operations, and building technology around aircraft data.
             </p>
         </div>
 
-        <!-- Overview -->
-        <div class="content-card">
-            <p>
-                This project involves running an ADS-B receiver on an Ubuntu server to collect
-                real-time aircraft position data. The system continuously processes incoming
-                signals and shares them with multiple flight tracking platforms.
-            </p>
+        <!-- Section 1: ADS-B -->
+        <div class="course-project">
+            <div class="course-text">
+                <h2>ADS-B Flight Tracking</h2>
+                <p>
+                    ADS-B (Automatic Dependent Surveillance-Broadcast) is a technology aircraft use to
+                    broadcast their position in real time. This project runs a dedicated Ubuntu server
+                    with an ADS-B receiver that continuously decodes aircraft signals and feeds live
+                    data to FlightAware, Flightradar24, and ADS-B Exchange. The system runs around
+                    the clock and is monitored using the Graphs1090 interface for signal quality and
+                    message rates.
+                </p>
+                <br>
+                <a href="https://www.flightaware.com/adsb/stats/user/narod#stats-252264"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="View FlightAware ADS-B statistics page">
+                    View FlightAware Stats
+                </a>
+            </div>
+            <div class="course-image">
+                <img src="images/fr24nr.png"
+                     alt="Screenshot of live ADS-B flight tracking map"
+                     class="course-image-actual"
+                     style="object-fit: cover; object-position: center;"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="course-image-placeholder" style="display:none;">ADS-B</div>
+            </div>
         </div>
 
-        <!-- Details -->
-        <div class="info-card-grid" style="margin-top: 2rem;">
-
-            <div class="info-card">
-                <h2>System Setup</h2>
+        <!-- Section 2: UAV -->
+        <div class="course-project reverse">
+            <div class="course-text">
+                <h2>UAV / Drone Operations</h2>
                 <p>
-                    Built on a dedicated Ubuntu server configured to receive ADS-B signals
-                    and run decoding software. The system operates continuously to collect
-                    and process aircraft data in real time.
+                    Currently working toward my FAA Part 107 Remote Pilot Certificate, which covers
+                    commercial drone operations in the National Airspace System. Part 107 requires
+                    knowledge of airspace classifications, weather, regulations, and safe drone
+                    operating procedures. Flying drones has been a hands-on way to deepen my
+                    understanding of aviation and airspace alongside my private pilot training.
                 </p>
             </div>
+            <div class="course-image">
+                <img src="images/uav.jpg"
+                     alt="UAV drone in flight"
+                     class="course-image-actual"
+                     style="object-fit: cover; object-position: center;"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="course-image-placeholder" style="display:none;">UAV</div>
+            </div>
+        </div>
 
-            <div class="info-card">
-                <h2>Data Streaming</h2>
+        <!-- Section 3: PPL -->
+        <div class="course-project">
+            <div class="course-text">
+                <h2>Private Pilot Certificate</h2>
                 <p>
-                    Feeds live aircraft data to multiple platforms including Flightradar24,
-                    FlightAware, and ADS-B Exchange, contributing to global tracking networks.
+                    Currently working toward my Private Pilot License (PPL) through general aviation
+                    training. The PPL program covers aircraft systems, flight maneuvers, navigation,
+                    weather interpretation, and airspace regulations. Pursuing this certificate has
+                    reinforced my interest in aviation as both a technical discipline and a personal
+                    passion, and complements my broader interest in aerospace and aircraft systems.
                 </p>
             </div>
-
-            <div class="info-card">
-                <h2>Monitoring</h2>
-                <p>
-                    Uses the Graphs1090 interface to monitor system performance, aircraft
-                    message rates, and signal quality, providing visibility into system health.
-                </p>
+            <div class="course-image">
+                <img src="images/ppl.jpg"
+                     alt="Small aircraft used for private pilot training"
+                     class="course-image-actual"
+                     style="object-fit: cover; object-position: center;"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="course-image-placeholder" style="display:none;">PPL</div>
             </div>
-
-            <div class="info-card">
-                <h2>Reliability</h2>
-                <p>
-                    Maintained consistent uptime by troubleshooting networking issues,
-                    service failures, and configuration problems to ensure stable operation.
-                </p>
-            </div>
-
-            <div class="info-card">
-                <h2>Live Feed</h2>
-                <p>
-                    View my live tracking statistics:
-                    <br><br>
-                    <a href="https://www.flightaware.com/adsb/stats/user/narod#stats-252264"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="View FlightAware ADS-B statistics page">
-                        FlightAware Stats Page
-                    </a>
-                </p>
-            </div>
-
         </div>
 
     </div>
@@ -114,7 +129,7 @@ adsb.html
     </div>
 
     <p class="footer-email">
-        <a href="mailto:narodarmel@gmail.com">narodarmel@gmail.com</a>
+        <a href="mailto:narodarmelws@gmail.com">narodarmelws@gmail.com</a>
     </p>
 
     <p>© 2026 Nathan Rodarmel</p>
