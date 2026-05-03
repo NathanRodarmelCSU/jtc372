@@ -14,6 +14,7 @@ projects.html
 </head>
 <body>
 
+<!-- ========== Navigation ========== -->
 <nav>
     <div class="nav__content">
         <div class="logo"><a href="index.html">Nathan Rodarmel</a></div>
@@ -30,9 +31,11 @@ projects.html
     </div>
 </nav>
 
+<!-- ========== Projects Section ========== -->
 <section class="section secondary-page projects-page">
     <div class="secondary-container">
 
+        <!-- Page Header -->
         <div class="secondary-header">
             <p class="page-subtitle">PROJECTS</p>
             <h1 class="page-title">Selected <span>Technical Work</span></h1>
@@ -42,13 +45,22 @@ projects.html
             </p>
         </div>
 
+        <!-- Project Cards Grid -->
         <div class="project-card-grid">
 
-            <!-- Home Lab -->
-            <a href="homelab.html" class="project-link">
+            <!-- Card 1: Home Lab -->
+            <a href="homelab.html" class="project-link" aria-label="View Home Lab project">
                 <article class="project-card-new">
-                    <div class="project-image-placeholder-new">Home Lab</div>
-                    <h2>Home Lab and Virtualization</h2>
+                    <div class="project-image-wrapper">
+                        <img src="images/proxmoxve.png"
+                             alt="Proxmox dashboard showing virtual machines in a home lab environment"
+                             class="project-image"
+                             style="object-position: left center;"
+                             onerror="this.style.display='none';">
+
+                        <div class="project-image-placeholder-new">Home Lab</div>
+                    </div>
+                    <h2>Home Lab</h2>
                     <p>
                         Built and managed a personal home lab environment using virtualization
                         tools, allowing for experimentation with operating systems, storage,
@@ -57,22 +69,36 @@ projects.html
                 </article>
             </a>
 
-            <!-- ADS-B -->
-            <a href="adsb.html" class="project-link">
+            <!-- Card 2: Aviation -->
+            <a href="adsb.html" class="project-link" aria-label="View Aviation page">
                 <article class="project-card-new">
-                    <div class="project-image-placeholder-new">Flight Tracking</div>
-                    <h2>ADS-B Flight Tracking Setup</h2>
+                    <div class="project-image-wrapper">
+                        <img src="images/fr24nr.png"
+                             alt="Flight tracking map showing live ADS-B data"
+                             class="project-image"
+                             onerror="this.style.display='none';">
+
+                        <div class="project-image-placeholder-new">Aviation</div>
+                    </div>
+                    <h2>Aviation</h2>
                     <p>
-                        Configured and maintained a flight tracking system using Linux-based
-                        tools, contributing data to external aviation tracking platforms.
+                        A personal interest spanning ADS-B flight tracking, UAV operations,
+                        and working toward a Private Pilot License.
                     </p>
                 </article>
             </a>
 
-            <!-- Coursework -->
-            <a href="coursework.html" class="project-link">
+            <!-- Card 3: Coursework -->
+            <a href="coursework.html" class="project-link" aria-label="View Computer Science Coursework projects">
                 <article class="project-card-new">
-                    <div class="project-image-placeholder-new">Coursework</div>
+                    <div class="project-image-wrapper">
+                        <img src="images/projects.png"
+                             alt="Java code from CS314 software engineering project"
+                             class="project-image"
+                             onerror="this.style.display='none';">
+
+                        <div class="project-image-placeholder-new">Coursework</div>
+                    </div>
                     <h2>Computer Science Coursework</h2>
                     <p>
                         Academic projects covering software development, systems, databases,
@@ -86,6 +112,7 @@ projects.html
     </div>
 </section>
 
+<!-- ========== Footer ========== -->
 <footer>
     <div class="footer-links">
         <a href="index.html">Home</a>
@@ -96,7 +123,7 @@ projects.html
     </div>
 
     <p class="footer-email">
-        <a href="mailto:narodarmel@gmail.com">narodarmel@gmail.com</a>
+        <a href="mailto:narodarmelws@gmail.com">narodarmelws@gmail.com</a>
     </p>
 
     <p>© 2026 Nathan Rodarmel</p>
