@@ -733,7 +733,7 @@ footer p {
     height: 100%;
 }
 
-/* Orange underline on card headings  */
+/* Orange underline on card headings */
 .resume-page .info-card h2 {
     padding-bottom: 0.65rem;
     margin-bottom: 1rem;
@@ -1161,14 +1161,20 @@ footer p {
 
 /* Stack to single column on smaller screens */
 @media (max-width: 900px) {
-    .course-project {
+    .course-project,
+    .course-project.reverse {
         grid-template-columns: 1fr;
     }
 
-    /* Remove reversed order on mobile */
-    .course-project.reverse .course-text,
+    /* On mobile, always show image above text for both normal and reversed rows */
+    .course-project .course-image,
     .course-project.reverse .course-image {
-        order: unset;
+        order: -1;
+    }
+
+    .course-project .course-text,
+    .course-project.reverse .course-text {
+        order: 0;
     }
 }
 
