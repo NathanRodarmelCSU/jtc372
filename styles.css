@@ -7,7 +7,8 @@ Notice: Some of this file has been organized with the use of Gen AI Tools*/
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Manrope:wght@400;500;600&display=swap");
 
 /* ========================================================= */
-/* Variables used across the entire site                      */
+/* CSS Variables                                              */
+/* Colors, shadows, and sizing used across the entire site   */
 /* ========================================================= */
 
 :root {
@@ -54,18 +55,21 @@ body {
     overflow-x: hidden;
 }
 
+/* Remove default link underlines */
 a {
     text-decoration: none;
 }
 
 /* ========================================================= */
 /* Shared layout and typography                               */
+/* Used across multiple pages                                 */
 /* ========================================================= */
 
 .section {
     background-color: var(--page-background-color);
 }
 
+/* Small uppercase label above headings */
 .page-subtitle {
     letter-spacing: 1.5px;
     color: var(--text-color-dark);
@@ -74,6 +78,7 @@ a {
     font-size: 0.95rem;
 }
 
+/* Large bold page heading */
 .page-title {
     font-family: "Outfit", sans-serif;
     font-size: 3.1rem;
@@ -84,10 +89,12 @@ a {
     letter-spacing: -1px;
 }
 
+/* Orange accent on span inside page-title */
 .page-title span {
     color: var(--primary-color);
 }
 
+/* Body description text under headings */
 .page-description {
     line-height: 1.85rem;
     color: var(--text-color-medium);
@@ -110,6 +117,7 @@ nav {
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
 }
 
+/* Three-column grid: logo | links | button */
 .nav__content {
     max-width: var(--maximum-content-width);
     margin: auto;
@@ -133,16 +141,17 @@ nav .logo a {
     transition: color 0.3s ease;
 }
 
-/* Hover */
+/* Logo hover */
 nav .logo a:hover {
     color: var(--primary-color);
 }
 
-/* Click */
+/* Logo click */
 nav .logo a:active {
     color: var(--primary-color-dark);
 }
 
+/* Nav link list */
 .nav__links {
     display: flex;
     align-items: center;
@@ -160,12 +169,14 @@ nav .logo a:active {
     font-size: 0.98rem;
 }
 
+/* Active and hover state for nav links */
 .nav__links li a:hover,
 .nav__links li a.active {
     border-bottom-color: var(--primary-color);
     color: var(--primary-color);
 }
 
+/* Orange CTA button on far right */
 .nav__button {
     justify-self: end;
     display: inline-block;
@@ -196,7 +207,7 @@ footer {
     font-size: 0.92rem;
 }
 
-/* Navigation links in footer */
+/* Navigation links row */
 .footer-links {
     display: flex;
     justify-content: center;
@@ -215,7 +226,7 @@ footer {
     text-decoration: underline;
 }
 
-/* Email section */
+/* Email display */
 .footer-email {
     margin: 0.35rem 0 0.25rem;
     font-size: 0.9rem;
@@ -240,12 +251,12 @@ footer {
     color: var(--primary-color-dark);
 }
 
-/* General paragraph spacing */
+/* General paragraph spacing in footer */
 footer p {
     margin: 0.25rem 0;
 }
 
-/* Disclaimer link */
+/* Disclaimer link at bottom of footer */
 .disclaimer {
     font-size: 0.82rem;
     color: var(--text-color-light);
@@ -263,9 +274,10 @@ footer p {
 }
 
 /* ========================================================= */
-/* Homepage (index.html main section)                         */
+/* Homepage (index.html)                                      */
 /* ========================================================= */
 
+/* Full-height hero container with two-column grid */
 .section__container {
     min-height: calc(90vh - 90px);
     max-width: var(--maximum-content-width);
@@ -277,6 +289,7 @@ footer p {
     align-items: center;
 }
 
+/* Left side: intro text column */
 .page-content {
     display: flex;
     flex-direction: column;
@@ -284,12 +297,14 @@ footer p {
     max-width: 590px;
 }
 
+/* CTA button row */
 .action__btns {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
+/* Shared styles for both CTA buttons */
 .action__btns button,
 .action__btns a {
     font-size: 1rem;
@@ -306,6 +321,7 @@ footer p {
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.05);
 }
 
+/* "My Projects" button - dark */
 .my_projects {
     background-color: #111111;
     color: #ffffff;
@@ -316,6 +332,7 @@ footer p {
     transform: translateY(-2px);
 }
 
+/* "Contact Me" button - orange */
 .contact_me {
     color: #ffffff;
     background-color: var(--primary-color);
@@ -327,7 +344,7 @@ footer p {
 }
 
 /* ========================================================= */
-/* Homepage image and profile placeholder                     */
+/* Homepage profile image / NR placeholder                    */
 /* ========================================================= */
 
 .profile-image {
@@ -336,6 +353,7 @@ footer p {
     align-items: center;
 }
 
+/* Outer circle with gradient background */
 .image-placeholder {
     width: min(20rem, 80%);
     aspect-ratio: 1 / 1;
@@ -348,6 +366,7 @@ footer p {
     position: relative;
 }
 
+/* Inner ring decorative border */
 .image-placeholder::before {
     content: "";
     position: absolute;
@@ -356,6 +375,7 @@ footer p {
     border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Dark inner circle with NR initials */
 .image-placeholder__inner {
     width: 74%;
     height: 74%;
@@ -371,6 +391,7 @@ footer p {
     padding: 1rem;
 }
 
+/* "NR" initials */
 .image-placeholder__inner span {
     font-family: "Outfit", sans-serif;
     font-size: 4rem;
@@ -380,15 +401,17 @@ footer p {
     margin-bottom: 0.65rem;
 }
 
+/* Caption text under initials */
 .image-placeholder__inner p {
     color: #dddddd;
     font-size: 0.98rem;
 }
 
 /* ========================================================= */
-/* Disclaimer page header and content                         */
+/* Disclaimer page                                            */
 /* ========================================================= */
 
+/* Makes footer stick to bottom on short content pages */
 .disclaimer-body {
     min-height: 100vh;
     display: flex;
@@ -419,6 +442,7 @@ footer p {
     max-width: none;
 }
 
+/* Developer / Course / Built In metadata rows */
 .project-facts {
     display: flex;
     flex-direction: column;
@@ -452,12 +476,14 @@ footer p {
     gap: 0.6rem;
 }
 
+/* Small IDE logo icon */
 .tool-logo {
     width: 20px;
     height: 20px;
     object-fit: contain;
 }
 
+/* Two-column layout for disclaimer + AI disclosure */
 .disclaimer-columns {
     display: grid;
     grid-template-columns: 1fr 0.9fr;
@@ -514,6 +540,7 @@ footer p {
     text-decoration: underline;
 }
 
+/* Work in progress notice at the bottom */
 .disclaimer-note {
     margin-top: 2rem;
     padding-top: 1.25rem;
@@ -528,38 +555,47 @@ footer p {
 }
 
 /* ========================================================= */
-/* Secondary pages (shared layout)                           */
+/* Secondary pages shared layout                              */
+/* Used by about, homelab, adsb, coursework, contact, resume  */
 /* ========================================================= */
 
+/* Padding for all secondary page sections */
 .secondary-page {
     padding: 5.5rem 1rem 4.5rem;
 }
+
+/* Centered max-width wrapper */
 .secondary-container {
     max-width: var(--maximum-content-width);
     margin: 0 auto;
 }
 
+/* Centered page heading block */
 .secondary-header {
     text-align: center;
     margin-bottom: 2.5rem;
 }
 
+/* Narrower description text in headers */
 .secondary-description {
     max-width: 42rem;
     margin-bottom: 0;
 }
 
+/* Center the description horizontally */
 .secondary-description--wide {
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Two-column card grid used on most secondary pages */
 .info-card-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
+/* White rounded card */
 .info-card {
     padding: 1.6rem;
     background-color: var(--card-background-color);
@@ -567,6 +603,7 @@ footer p {
     box-shadow: var(--soft-box-shadow);
 }
 
+/* Bulleted list used inside info cards */
 .page-list {
     margin: 0;
     padding-left: 1.2rem;
@@ -576,6 +613,7 @@ footer p {
     margin-bottom: 0.45rem;
 }
 
+/* Muted subtext below card headings */
 .card-subtext {
     color: var(--text-color-light);
     margin-bottom: 0.35rem;
@@ -585,6 +623,7 @@ footer p {
     margin-bottom: 1.2rem;
 }
 
+/* Two-column layout: text left, image/visual right */
 .secondary-layout {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
@@ -596,11 +635,13 @@ footer p {
     min-width: 0;
 }
 
+/* Visual side - centers the profile photo */
 .secondary-visual {
     display: grid;
     place-items: center;
 }
 
+/* White rounded content block */
 .content-card {
     background-color: var(--card-background-color);
     border-radius: 22px;
@@ -618,6 +659,7 @@ footer p {
     margin-bottom: 0;
 }
 
+/* Profile photo on about.html */
 .profile-panel {
     width: min(26rem, 100%);
     aspect-ratio: 3 / 4;
@@ -633,6 +675,7 @@ footer p {
     padding: 1.25rem;
 }
 
+/* Inner text for the NR placeholder on about.html */
 .profile-panel__inner {
     text-align: center;
     color: var(--primary-color-dark);
@@ -652,15 +695,18 @@ footer p {
     letter-spacing: 0.04em;
 }
 
+/* Extra top margin for the about page card grid */
 .about-card-grid {
     margin-top: 2rem;
 }
 
+/* Stack layout on smaller screens */
 @media (max-width: 900px) {
     .secondary-layout {
         grid-template-columns: 1fr;
     }
 
+    /* Photo above text on mobile */
     .secondary-visual {
         order: -1;
     }
@@ -669,14 +715,16 @@ footer p {
         width: min(22rem, 100%);
     }
 }
+
 /* ========================================================= */
-/* Resume page                                               */
+/* Resume page                                                */
 /* ========================================================= */
 
 .resume-page .secondary-header {
     margin-bottom: 2.75rem;
 }
 
+/* Cards align to top, not stretched */
 .resume-page .info-card-grid {
     align-items: start;
 }
@@ -685,6 +733,7 @@ footer p {
     height: 100%;
 }
 
+/* Orange underline on card headings */
 .resume-page .info-card h2 {
     padding-bottom: 0.65rem;
     margin-bottom: 1rem;
@@ -721,6 +770,7 @@ footer p {
     margin-bottom: 0;
 }
 
+/* Professional strengths card at the bottom */
 .resume-note-card {
     background-color: var(--card-background-color);
     border-radius: 22px;
@@ -757,6 +807,7 @@ footer p {
     transform: translateY(-1px);
 }
 
+/* Hero area above the cards: download button + skill pills */
 .resume-hero {
     text-align: center;
     margin-bottom: 1.25rem;
@@ -766,6 +817,7 @@ footer p {
     margin-bottom: 2rem;
 }
 
+/* Orange PDF download button */
 .resume-download-button {
     display: inline-block;
     padding: 0.95rem 1.5rem;
@@ -783,6 +835,7 @@ footer p {
     transform: translateY(-1px);
 }
 
+/* Horizontal scrolling row of skill pills */
 .resume-tag-row {
     display: flex;
     flex-wrap: nowrap;
@@ -795,6 +848,7 @@ footer p {
     padding: 0.25rem 0;
 }
 
+/* Individual skill pill */
 .resume-tag-pill {
     display: inline-flex;
     align-items: center;
@@ -810,6 +864,7 @@ footer p {
     box-shadow: var(--soft-box-shadow);
 }
 
+/* Skill group heading inside Technical Skills card */
 .resume-page .info-card h3 {
     font-family: "Outfit", sans-serif;
     font-size: 1.05rem;
@@ -817,6 +872,7 @@ footer p {
     margin-bottom: 0.35rem;
 }
 
+/* Each skill category block */
 .resume-skill-group {
     margin-bottom: 1.15rem;
 }
@@ -830,6 +886,8 @@ footer p {
     line-height: 1.7rem;
     margin-bottom: 0;
 }
+
+/* Resume responsive breakpoints */
 @media (max-width: 900px) {
     .info-card-grid {
         grid-template-columns: 1fr;
@@ -855,13 +913,14 @@ footer p {
 }
 
 /* ========================================================= */
-/* Contact page                                              */
+/* Contact page                                               */
 /* ========================================================= */
 
 .contact-page .secondary-header {
     margin-bottom: 2.25rem;
 }
 
+/* Center-align all contact cards */
 .contact-page .info-card {
     text-align: center;
 }
@@ -882,21 +941,24 @@ footer p {
 }
 
 /* ========================================================= */
-/* Projects page                                             */
+/* Projects page                                              */
 /* ========================================================= */
 
+/* Three-column card grid */
 .project-card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
+/* Anchor wrapping each project card */
 .project-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
+/* Individual project card */
 .project-card-new {
     background-color: var(--card-background-color);
     border-radius: 22px;
@@ -906,6 +968,7 @@ footer p {
     transition: 0.25s;
 }
 
+/* Lift effect on hover */
 .project-link:hover .project-card-new {
     transform: translateY(-4px);
 }
@@ -923,6 +986,7 @@ footer p {
     font-size: 0.96rem;
 }
 
+/* Gray placeholder shown when no image is present */
 .project-image-placeholder-new {
     width: 100%;
     aspect-ratio: 4 / 3;
@@ -940,7 +1004,7 @@ footer p {
     margin-bottom: 1rem;
 }
 
-/* Real project image with fallback placeholder */
+/* Wrapper that holds both the real image and the fallback placeholder */
 .project-image-wrapper {
     position: relative;
     width: 100%;
@@ -955,6 +1019,7 @@ footer p {
     );
 }
 
+/* Real project image */
 .project-image {
     width: 100%;
     height: 100%;
@@ -962,7 +1027,7 @@ footer p {
     display: block;
 }
 
-/* Only affects placeholders inside image wrappers */
+/* Placeholder sits behind the real image inside the wrapper */
 .project-image-wrapper .project-image-placeholder-new {
     position: absolute;
     inset: 0;
@@ -975,33 +1040,34 @@ footer p {
     z-index: 1;
 }
 
+/* Stack to single column on smaller screens */
 @media (max-width: 900px) {
     .project-card-grid {
         grid-template-columns: 1fr;
     }
 }
 
-
 /* ========================================================= */
-/* Homelab page                                              */
+/* Homelab page                                               */
 /* ========================================================= */
 
+/* Top margin for the infrastructure cards grid */
 .homelab-grid {
     margin-top: 2rem;
 }
 
+/* Top margin for the skills card at the bottom */
 .homelab-skills {
     margin-top: 2rem;
 }
 
-/* Icon styling */
-
+/* Square icon container above each card heading */
 .homelab-icon {
     width: 50px;
     height: 50px;
     margin: 0 auto 0.75rem;
     border-radius: 12px;
-    background-color: var(--footer-background-color); /* FIX */
+    background-color: var(--footer-background-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1012,16 +1078,16 @@ footer p {
     height: 28px;
     object-fit: contain;
 }
+
 .homelab-page .secondary-header {
     margin-bottom: 2rem;
 }
 
-
-
 /* ========================================================= */
-/* Coursework page                                           */
+/* Coursework page (also used by adsb.html aviation page)     */
 /* ========================================================= */
 
+/* Alternating two-column row: text left, image right */
 .course-project {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -1030,18 +1096,22 @@ footer p {
     margin-bottom: 4rem;
 }
 
+/* Reversed row: image left, text right */
 .course-project.reverse {
     grid-template-columns: 0.8fr 1.2fr;
 }
 
+/* Push text to second column in reversed rows */
 .course-project.reverse .course-text {
     order: 2;
 }
 
+/* Pull image to first column in reversed rows */
 .course-project.reverse .course-image {
     order: 1;
 }
 
+/* Project title */
 .course-text h2 {
     font-family: "Outfit", sans-serif;
     font-size: 1.75rem;
@@ -1049,16 +1119,19 @@ footer p {
     color: var(--text-color-dark);
 }
 
+/* Project description */
 .course-text p {
     color: var(--text-color-medium);
     line-height: 1.85rem;
 }
 
+/* Centers the image within its column */
 .course-image {
     display: flex;
     justify-content: center;
 }
 
+/* Gray placeholder shown before a real image is added */
 .course-image-placeholder {
     width: 100%;
     height: 220px;
@@ -1076,6 +1149,7 @@ footer p {
     box-shadow: var(--soft-box-shadow);
 }
 
+/* Real project screenshot image */
 .course-image-actual {
     width: 100%;
     height: 220px;
@@ -1085,11 +1159,13 @@ footer p {
     background-color: var(--placeholder-background-dark);
 }
 
+/* Stack to single column on smaller screens */
 @media (max-width: 900px) {
     .course-project {
         grid-template-columns: 1fr;
     }
 
+    /* Remove reversed order on mobile */
     .course-project.reverse .course-text,
     .course-project.reverse .course-image {
         order: unset;
@@ -1097,9 +1173,10 @@ footer p {
 }
 
 /* ========================================================= */
-/* Responsive styles                                           */
+/* Responsive styles                                          */
 /* ========================================================= */
 
+/* Tablet: stack nav, center hero */
 @media (max-width: 980px) {
     .nav__content {
         grid-template-columns: 1fr;
@@ -1116,6 +1193,7 @@ footer p {
         gap: 1rem 1.5rem;
     }
 
+    /* Stack hero to single column */
     .section__container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1142,6 +1220,7 @@ footer p {
         width: min(21rem, 86vw);
     }
 
+    /* Stack disclaimer columns */
     .disclaimer-columns {
         grid-template-columns: 1fr;
         gap: 1.25rem;
@@ -1153,6 +1232,7 @@ footer p {
     }
 }
 
+/* Mobile: smaller headings and spacing */
 @media (max-width: 700px) {
     .page-title {
         font-size: 2.9rem;
@@ -1189,6 +1269,7 @@ footer p {
     }
 }
 
+/* Small mobile: tightest spacing */
 @media (max-width: 500px) {
     .page-title {
         font-size: 2.35rem;
@@ -1199,6 +1280,7 @@ footer p {
         line-height: 1.75rem;
     }
 
+    /* Full-width buttons on small screens */
     .action__btns button,
     .action__btns a {
         width: 100%;
